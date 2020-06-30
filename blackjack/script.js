@@ -52,3 +52,10 @@ function dealCards(deck) {
     player.hand = hand;
   console.log(player);
 }
+
+function checkScore(player) {
+  let score = 0;
+  for (let i = 0; i < player.hand.length; i++) {
+
+  }
+}
