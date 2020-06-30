@@ -1,4 +1,5 @@
 const deck = []
+const player = {}
 
 start();
 
@@ -6,6 +7,7 @@ function start() {
   createDeck(deck);
   const shuffledDeck = shuffle(deck);
   console.log(shuffledDeck);
+  dealCards(shuffledDeck);
 }
 
 function createDeck(deck) {
@@ -29,15 +31,24 @@ function createDeck(deck) {
 }
 
 function shuffle(deck) {
-    var tempArray = [];
-    var newArray = [];
-    for (let i = 0; i < deck.length; i++) {
-      tempArray[i] = deck[i];
-    }
-    while (tempArray[0]) {
-      const randomCard = Math.floor((Math.random() * tempArray.length));
-      newArray.push(tempArray[randomCard]);
-      tempArray.splice(randomCard, 1);
-    }
-    return newArray;
+  var tempArray = [];
+  var newArray = [];
+  for (let i = 0; i < deck.length; i++) {
+    tempArray[i] = deck[i];
   }
+  while (tempArray[0]) {
+    const randomCard = Math.floor((Math.random() * tempArray.length));
+    newArray.push(tempArray[randomCard]);
+    tempArray.splice(randomCard, 1);
+  }
+  return newArray;
+}
+
+function dealCards(deck) {
+  const hand = [];
+    for (let k = 0; k < 2; k++) {
+      hand[k] = deck.pop();
+    }
+    player.hand = hand;
+  console.log(player);
+}
