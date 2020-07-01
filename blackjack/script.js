@@ -56,6 +56,17 @@ function dealCards(deck) {
 function checkScore(player) {
   let score = 0;
   for (let i = 0; i < player.hand.length; i++) {
-
+    switch (player.hand[i].rank) {
+      case 'Ace':
+        score += 11;
+        break;
+      case 'Jack':
+      case 'Queen':
+      case 'King':
+        score += 10;
+        break;
+      default:
+        score += parseInt(player.hand[i].rank);
+    }
   }
 }
