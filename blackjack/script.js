@@ -8,6 +8,7 @@ function start() {
   const shuffledDeck = shuffle(deck);
   console.log(shuffledDeck);
   dealCards(shuffledDeck);
+  checkScore(player);
 }
 
 function createDeck(deck) {
@@ -68,5 +69,14 @@ function checkScore(player) {
       default:
         score += parseInt(player.hand[i].rank);
     }
+  }
+  player.score = score;
+  console.log(score);
+  console.log(player);
+}
+
+function checkStatus(player) {
+  if (player.score > 21 ) {
+    console.log("You lose")
   }
 }
