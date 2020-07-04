@@ -80,5 +80,7 @@ function checkStatus(player) {
     console.log("You lose");
   } else if (player.score === 21 || player.hand.length === 5)  {
     console.log("You Win");
+  } else {
+    console.log("Draw Again?")
   }
 }
