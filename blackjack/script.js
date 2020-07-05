@@ -75,6 +75,12 @@ function checkScore(player) {
   console.log(player);
 }
 
+function drawAgain(input, deck) {
+  if (input === "Yes") {
+    player.hand.push(deck.pop());
+  }
+}
+
 function checkStatus(player) {
   if (player.score > 21 ) {
     console.log("You lose");
