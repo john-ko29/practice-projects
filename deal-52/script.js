@@ -6,6 +6,7 @@ const players = [
 ];
 
 const deck = [];
+const discard = [];
 
 function createDeck(deck) {
   const suit = ['clubs', 'diamonds', 'hearts', 'spades'];
