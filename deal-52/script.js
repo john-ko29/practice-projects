@@ -27,3 +27,17 @@ function createDeck(deck) {
     }
   }
 }
+
+function shuffle(deck) {
+  var tempArray = [];
+  var newArray = [];
+  for (let i = 0; i < deck.length; i++) {
+    tempArray[i] = deck[i];
+  }
+  while (tempArray[0]) {
+    const randomCard = Math.floor((Math.random() * tempArray.length));
+    newArray.push(tempArray[randomCard]);
+    tempArray.splice(randomCard, 1);
+  }
+  return newArray;
+}
