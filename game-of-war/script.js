@@ -1,5 +1,12 @@
 const deck = [];
 
+const players = [
+  { name: 'John', hand: '' },
+  { name: 'David', hand: '' },
+  { name: 'Eric', hand: '' },
+  { name: 'Kevin', hand: '' }
+];
+
 function createDeck(deck) {
   const suit = ['clubs', 'diamonds', 'hearts', 'spades'];
   for (let k = 0; k < 4; k++) {
