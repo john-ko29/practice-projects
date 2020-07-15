@@ -7,6 +7,11 @@ const players = [
   { name: 'Kevin', hand: '' }
 ];
 
+function start() {
+  createDeck(deck);
+  const shuffledDeck = shuffle(deck);
+}
+
 function createDeck(deck) {
   const suit = ['clubs', 'diamonds', 'hearts', 'spades'];
   for (let k = 0; k < 4; k++) {
