@@ -45,3 +45,14 @@ function shuffle(deck) {
   }
   return newArray;
 }
+
+function dealCards(deck) {
+  for (let i = 0; i < players.length; i++) {
+    const hand = [];
+    for (let k = 0; k < 13; k++) {
+      hand[k] = deck.pop();
+    }
+    players[i].hand = hand;
+  }
+  console.log(players);
+}
