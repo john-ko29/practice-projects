@@ -7,9 +7,12 @@ const players = [
   { name: 'Kevin', hand: '' }
 ];
 
+start();
+
 function start() {
   createDeck(deck);
   const shuffledDeck = shuffle(deck);
+  dealCards(shuffledDeck);
 }
 
 function createDeck(deck) {
