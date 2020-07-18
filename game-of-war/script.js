@@ -59,3 +59,7 @@ function dealCards(deck) {
   }
   console.log(players);
 }
+
+function compare(players) {
+
+}
