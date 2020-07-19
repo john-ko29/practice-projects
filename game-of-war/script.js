@@ -61,5 +61,5 @@ function dealCards(deck) {
 }
 
 function compare(players) {
-
+  const topCard = [];
 }
