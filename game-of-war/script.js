@@ -62,4 +62,7 @@ function dealCards(deck) {
 
 function compare(players) {
   const topCard = [];
+  for(let i = 0; i < players.length; i ++) {
+    topCard[i] = players[i].hand.pop();
+  }
 }
