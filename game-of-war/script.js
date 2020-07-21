@@ -13,6 +13,7 @@ function start() {
   createDeck(deck);
   const shuffledDeck = shuffle(deck);
   dealCards(shuffledDeck);
+  compare(players);
 }
 
 function createDeck(deck) {
@@ -65,4 +66,5 @@ function compare(players) {
   for(let i = 0; i < players.length; i ++) {
     topCard[i] = players[i].hand.pop();
   }
+  console.log(topCard)
 }
