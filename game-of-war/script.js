@@ -68,3 +68,7 @@ function compare(players) {
   }
   console.log(topCard)
 }
+
+function rankCards(cards) {
+  let topCard = 0;
+}
