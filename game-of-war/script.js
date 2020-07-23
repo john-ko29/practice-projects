@@ -70,5 +70,21 @@ function compare(players) {
 }
 
 function rankCards(cards) {
+  let score = 0;
   let topCard = 0;
+  const playerScore = [];
+  for (let i = 0; i < cards.length; i++) {
+    switch (cards[i]) {
+      case 'Ace':
+        score += 11;
+        break;
+      case 'Jack':
+      case 'Queen':
+      case 'King':
+        score += 10;
+        break;
+      default:
+        score += parseInt(cards[i]);
+    }
+  }
 }
