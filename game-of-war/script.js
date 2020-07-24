@@ -67,6 +67,7 @@ function compare(players) {
     topCard[i] = players[i].hand.pop();
   }
   console.log(topCard)
+  rankCards(topCard)
 }
 
 function rankCards(cards) {
