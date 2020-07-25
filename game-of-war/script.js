@@ -88,4 +88,5 @@ function rankCards(cards) {
         score += parseInt(cards[i]);
     }
   }
+  console.log(topCard)
 }
