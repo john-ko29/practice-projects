@@ -67,7 +67,8 @@ function compare(players) {
     topCard[i] = players[i].hand.pop();
   }
   console.log(topCard)
-  rankCards(topCard)
+  const currentScores = rankCards(topCard)
+
 }
 
 function rankCards(cards) {
@@ -87,6 +88,8 @@ function rankCards(cards) {
       default:
         score += parseInt(cards[i]);
     }
+    playerScore.push(score);
   }
   console.log(topCard)
+  return playerScore;
 }
