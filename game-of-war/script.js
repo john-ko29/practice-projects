@@ -63,17 +63,21 @@ function dealCards(deck) {
 
 function compare(players) {
   const topCard = [];
-  for(let i = 0; i < players.length; i ++) {
+  for(let i = 0; i < players.length; i++) {
     topCard[i] = players[i].hand.pop();
   }
   console.log(topCard)
   const currentScores = rankCards(topCard)
-
+  let highestCard = currentScores[0];
+  for (let i = 1; i < currentScores.length; i++)  {
+    if(highestCard < currentScores[i]) {
+      highestCard = currentScores[i]
+    }
+  }
 }
 
 function rankCards(cards) {
   let score = 0;
-  let topCard = 0;
   const playerScore = [];
   for (let i = 0; i < cards.length; i++) {
     switch (cards[i]) {
@@ -90,6 +94,6 @@ function rankCards(cards) {
     }
     playerScore.push(score);
   }
-  console.log(topCard)
+  console.log(playerScore)
   return playerScore;
 }
