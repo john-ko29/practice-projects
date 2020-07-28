@@ -63,6 +63,7 @@ function dealCards(deck) {
 
 function compare(players) {
   const topCard = [];
+  let position = 0;
   for(let i = 0; i < players.length; i++) {
     topCard[i] = players[i].hand.pop();
   }
@@ -72,8 +73,14 @@ function compare(players) {
   for (let i = 1; i < currentScores.length; i++)  {
     if(highestCard < currentScores[i]) {
       highestCard = currentScores[i]
+      position = i
     }
   }
+  winResult(position)
+}
+
+function winResult(post) {
+
 }
 
 function rankCards(cards) {
