@@ -76,11 +76,13 @@ function compare(players) {
       position = i
     }
   }
-  winResult(position)
+  winResult(position, currentScores)
 }
 
-function winResult(post) {
-
+function winResult(post, scores) {
+  for (let i = 0; i < scores.length; i++) {
+    players[post]  = scores.pop();
+  }
 }
 
 function rankCards(cards) {
