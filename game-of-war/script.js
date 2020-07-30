@@ -65,7 +65,7 @@ function compare(players) {
   const topCard = [];
   let position = 0;
   for(let i = 0; i < players.length; i++) {
-    topCard[i] = players[i].hand.pop();
+    topCard[i].hand = players[i].hand.pop();
   }
   console.log(topCard)
   const currentScores = rankCards(topCard)
@@ -83,6 +83,7 @@ function winResult(post, scores) {
   for (let i = 0; i < scores.length; i++) {
     players[post]  = scores.pop();
   }
+  console.log(players)
 }
 
 function rankCards(cards) {
