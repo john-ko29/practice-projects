@@ -1,6 +1,8 @@
 
 const horses = generateHorse();
 
+start();
+
 function start() {
 
 }
