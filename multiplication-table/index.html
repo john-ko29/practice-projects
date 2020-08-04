@@ -41,10 +41,14 @@
 
         function makeMultTable(startNum, endNum, timeValue){
         //write a for loop to go from the start to the end number, and call the function "appendADiv" and give it the value you want in the new cell
-        /*for example, makeMultTable(0,2,3) would give 
+        /*for example, makeMultTable(0,2,3) would give
         0 x 3 = 0
         1 x 3 = 3
         2 x 3 = 3*/
+          let timesTable = '';
+          for (let i = startNum; i < endNum; i++) {
+            timesTable += `i x ${timeValue} \n`
+          }
         }
 
     </script>
