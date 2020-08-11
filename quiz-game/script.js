@@ -8,4 +8,5 @@ function start() {
 
 function askQuestion() {
   const question = questions.pop();
+  console.log(question);
 }
